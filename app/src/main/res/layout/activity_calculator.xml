@@ -4,28 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
     android:orientation="vertical"
     tools:context=".ui.CalculatorActivity">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <TextView
         android:id="@+id/showResultTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:paddingTop="16dp"/>
+        android:gravity="end"
+        android:paddingTop="16dp"
+        android:textColor="@color/white"
+        android:textSize="45sp" />
 
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="4"
->
+        android:columnCount="4">
 
         <Button
-            android:id="@+id/key_с"
+            android:id="@+id/key_сlean"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/key_с"
+            android:text="@string/key_сlean"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/key_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="@string/key_del"
             android:textSize="25sp" />
 
         <Button
@@ -36,19 +51,13 @@
             android:text="@string/key_polarity"
             android:textSize="25sp" />
 
+
         <Button
-            android:id="@+id/key_perсent"
+            android:id="@+id/key_divide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/key_perсent"
-            android:textSize="25sp" />
-        <Button
-            android:id="@+id/key_del"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="@string/key_del"
+            android:text="@string/key_divide"
             android:textSize="25sp" />
 
         <Button
@@ -130,6 +139,7 @@
             android:layout_columnWeight="1"
             android:text="@string/key_8"
             android:textSize="25sp" />
+
         <Button
             android:id="@+id/key_9"
             android:layout_width="wrap_content"
@@ -137,6 +147,7 @@
             android:layout_columnWeight="1"
             android:text="@string/key_9"
             android:textSize="25sp" />
+
         <Button
             android:id="@+id/key_multiply"
             android:layout_width="wrap_content"
@@ -149,9 +160,11 @@
             android:id="@+id/key_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
             android:layout_columnWeight="1"
             android:text="@string/key_0"
             android:textSize="25sp" />
+
         <Button
             android:id="@+id/key_dot"
             android:layout_width="wrap_content"
@@ -167,15 +180,6 @@
             android:layout_columnWeight="1"
             android:text="@string/key_result"
             android:textSize="25sp" />
-
-        <Button
-            android:id="@+id/key_divide"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="@string/key_divide"
-            android:textSize="25sp" />
-
 
     </GridLayout>
 </LinearLayout>

@@ -62,7 +62,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         operations.put(R.id.key_multiply, Operator.MULTIPLY);
         operations.put(R.id.key_divide, Operator.DIVIDE);
         operations.put(R.id.key_result, Operator.RESULT);
-        operations.put(R.id.key_с, Operator.CLEAN);
+        operations.put(R.id.key_polarity, Operator.POLARITY);
 
 
         View.OnClickListener operationsClickListener = new View.OnClickListener() {
@@ -76,8 +76,20 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         findViewById(R.id.key_multiply).setOnClickListener(operationsClickListener);
         findViewById(R.id.key_divide).setOnClickListener(operationsClickListener);
         findViewById(R.id.key_result).setOnClickListener(operationsClickListener);
-        findViewById(R.id.key_с).setOnClickListener(operationsClickListener);
+        findViewById(R.id.key_polarity).setOnClickListener(operationsClickListener);
 
+        findViewById(R.id.key_polarity).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculatorPresenter.polarityPass();
+            }
+        });
+        findViewById(R.id.key_сlean).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculatorPresenter.cleanPass();
+            }
+        });
     }
 
 

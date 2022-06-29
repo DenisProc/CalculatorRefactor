@@ -35,4 +35,18 @@ public class CalculatorPresenter {
         arg2 = 0.0;
         selectedOperator = operator;
     }
+
+    public void polarityPass() {
+        if (arg1 < 0) {
+            arg1 = arg1 * -1;
+        } else {
+            arg1 = arg1 * -1;
+        }
+        view.showResult(String.valueOf(arg1));
+    }
+
+    public void cleanPass() {
+        arg1 = 0.0;
+        view.showResult(String.valueOf(arg1));
+    }
 }

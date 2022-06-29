@@ -14,8 +14,12 @@ public class CalculatorImplement implements Calculator{
                 return arg1 / arg2;
             case RESULT:
                 return arg1;
-            case CLEAN:
-                return arg1 = 0.0;
+            case POLARITY:
+                if (arg1<0){
+                    return arg1 *= -1;
+                }else {
+                    return arg1= arg1 - arg1 - arg1;
+                }
         }
         return 0.0;
     }

@@ -6,5 +6,6 @@ public enum Operator {
     MULTIPLY,
     DIVIDE,
     RESULT,
-    CLEAN
+    CLEAN,
+    POLARITY
 }
