@@ -1,7 +1,7 @@
 package com.example.calculatorrefactor.ui;
 
 import com.example.calculatorrefactor.model.Calculator;
-import com.example.calculatorrefactor.model.CalculatorImplement;
+
 import com.example.calculatorrefactor.model.Operator;
 
 import java.text.DecimalFormat;
