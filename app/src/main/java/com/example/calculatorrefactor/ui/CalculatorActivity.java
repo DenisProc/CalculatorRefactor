@@ -39,12 +39,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         args.put(R.id.key_8, 8);
         args.put(R.id.key_9, 9);
 
-        View.OnClickListener argsClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calculatorPresenter.argsPress(args.get(view.getId()));
-            }
-        };
+        View.OnClickListener argsClickListener = view -> calculatorPresenter.argsPress(args.get(view.getId()));
         findViewById(R.id.key_0).setOnClickListener(argsClickListener);
         findViewById(R.id.key_1).setOnClickListener(argsClickListener);
         findViewById(R.id.key_2).setOnClickListener(argsClickListener);
@@ -65,12 +60,8 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         operations.put(R.id.key_polarity, Operator.POLARITY);
 
 
-        View.OnClickListener operationsClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calculatorPresenter.operationsPress(operations.get(view.getId()));
-            }
-        };
+        View.OnClickListener operationsClickListener = view -> calculatorPresenter.operationsPress(operations.get(view.getId()));
+
         findViewById(R.id.key_plus).setOnClickListener(operationsClickListener);
         findViewById(R.id.key_minus).setOnClickListener(operationsClickListener);
         findViewById(R.id.key_multiply).setOnClickListener(operationsClickListener);
@@ -78,25 +69,13 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         findViewById(R.id.key_result).setOnClickListener(operationsClickListener);
         findViewById(R.id.key_polarity).setOnClickListener(operationsClickListener);
 
-        findViewById(R.id.key_polarity).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calculatorPresenter.polarityPass();
-            }
-        });
+        findViewById(R.id.key_polarity).setOnClickListener(view -> calculatorPresenter.polarityPass());
 
-        findViewById(R.id.key_сlean).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calculatorPresenter.cleanPass();
-            }
-        });
-        findViewById(R.id.key_dot).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        findViewById(R.id.key_сlean).setOnClickListener(view -> calculatorPresenter.cleanPass());
 
-            }
-        });
+        findViewById(R.id.key_dot).setOnClickListener(view -> calculatorPresenter.dotPass());
+
+        findViewById(R.id.key_radical).setOnClickListener(view -> calculatorPresenter.radicalPass());
     }
 
 
