@@ -47,6 +47,19 @@ public class CalculatorPresenter {
 
     public void cleanPass() {
         arg1 = 0.0;
+        arg2 = null;
         view.showResult(String.valueOf(arg1));
     }
+/*
+    public boolean dotPass() {
+        if (arg2 == null) {
+            arg1 = arg1 ;
+            view.showResult(String.valueOf(arg1));
+        } else {
+            arg2 = arg2 * 10 + number;
+            view.showResult(String.valueOf(arg2));
+        }
+    }
+
+ */
 }

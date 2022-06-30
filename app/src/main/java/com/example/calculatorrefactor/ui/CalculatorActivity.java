@@ -84,10 +84,17 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
                 calculatorPresenter.polarityPass();
             }
         });
+
         findViewById(R.id.key_сlean).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 calculatorPresenter.cleanPass();
+            }
+        });
+        findViewById(R.id.key_dot).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }
