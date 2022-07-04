@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="caclcOperationsBtn" format="reference"/>
+    <attr name="caclcBtnLand" format="reference"/>
+    <attr name="layoutStyle" format="reference"/>
+</resources>

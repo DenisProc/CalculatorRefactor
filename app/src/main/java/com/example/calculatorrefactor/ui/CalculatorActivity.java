@@ -2,13 +2,20 @@ package com.example.calculatorrefactor.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.example.calculatorrefactor.R;
 import com.example.calculatorrefactor.model.CalculatorImplement;
 import com.example.calculatorrefactor.model.Operator;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,10 +29,26 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SharedPreferences preferences = getSharedPreferences("themes.xml", Context.MODE_PRIVATE);
+        int theme = preferences.getInt("theme",R.style.Theme_CalculatorRefactorLight);
+        setTheme(theme);
+
+
         setContentView(R.layout.activity_calculator);
 
         resultTxt = findViewById(R.id.showResultTxt);
         calculatorPresenter = new CalculatorPresenter(this, new CalculatorImplement());
+
+        findViewById(R.id.dark_theme).setOnClickListener(view -> {
+            preferences.edit().putInt("theme",R.style.Theme_CalculatorRefactorDark).commit();
+            recreate();
+        });
+        findViewById(R.id.light_theme).setOnClickListener(view -> {
+            preferences.edit().putInt("theme",R.style.Theme_CalculatorRefactorLight).commit();
+            recreate();
+        });
+
 
         Map<Integer, Integer> args = new HashMap<>();
         args.put(R.id.key_0, 0);
@@ -69,7 +92,12 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         findViewById(R.id.key_result).setOnClickListener(operationsClickListener);
         findViewById(R.id.key_polarity).setOnClickListener(operationsClickListener);
 
-        findViewById(R.id.key_polarity).setOnClickListener(view -> calculatorPresenter.polarityPass());
+        findViewById(R.id.key_polarity).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                calculatorPresenter.polarityPass();
+            }
+        });
 
         findViewById(R.id.key_сlean).setOnClickListener(view -> calculatorPresenter.cleanPass());
 

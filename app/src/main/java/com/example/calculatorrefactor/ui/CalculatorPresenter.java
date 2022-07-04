@@ -3,6 +3,7 @@ package com.example.calculatorrefactor.ui;
 import com.example.calculatorrefactor.model.Calculator;
 
 import com.example.calculatorrefactor.model.Operator;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 import java.text.DecimalFormat;
 
@@ -90,5 +91,10 @@ public class CalculatorPresenter {
     private void format(double value) {
 
         view.showResult(formater.format(value));
+    }
+    private void switchTheme(SwitchMaterial switchTheme) {
+        if (switchTheme == null) {
+
+        }
     }
 }
