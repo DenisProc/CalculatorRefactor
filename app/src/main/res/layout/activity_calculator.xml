@@ -11,29 +11,30 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:columnCount="2">
+        android:columnCount="2"
+        android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/dark_theme"
-            android:layout_width="wrap_content"
             style="@style/ThemeButtonStyle"
-            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
             android:backgroundTint="#383838"
             android:text="@string/key_darkTheme" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/light_theme"
-            android:layout_width="wrap_content"
             style="@style/ThemeButtonStyle"
-            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:backgroundTint="@color/calc_backgroundTint_light"
-            android:text="@string/key_lightTheme"/>
+            android:layout_columnWeight="1"
+            android:text="@string/key_lightTheme"
+            app:backgroundTint="@color/calc_backgroundTint_light" />
 
 
     </GridLayout>
+
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"

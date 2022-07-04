@@ -11,29 +11,30 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:columnCount="2">
+        android:columnCount="2"
+        android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/dark_theme"
-            android:layout_width="wrap_content"
             style="@style/ThemeButtonStyle"
-            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
             android:backgroundTint="#383838"
             android:text="@string/key_darkTheme" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/light_theme"
-            android:layout_width="wrap_content"
             style="@style/ThemeButtonStyle"
-            android:layout_columnWeight="1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:backgroundTint="@color/calc_backgroundTint_light"
-            android:text="@string/key_lightTheme"/>
+            android:layout_columnWeight="1"
+            android:text="@string/key_lightTheme"
+            app:backgroundTint="@color/calc_backgroundTint_light" />
 
 
     </GridLayout>
+
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -57,8 +58,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_сlean" />
 
         <com.google.android.material.button.MaterialButton
@@ -67,8 +68,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_radical" />
 
         <com.google.android.material.button.MaterialButton
@@ -77,8 +78,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_polarity" />
 
 
@@ -88,8 +89,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_divide" />
 
         <com.google.android.material.button.MaterialButton
@@ -97,8 +98,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_1" />
 
         <com.google.android.material.button.MaterialButton
@@ -106,8 +107,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_2" />
 
         <com.google.android.material.button.MaterialButton
@@ -115,8 +116,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_3" />
 
         <com.google.android.material.button.MaterialButton
@@ -125,8 +126,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_plus" />
 
         <com.google.android.material.button.MaterialButton
@@ -134,8 +135,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_4" />
 
         <com.google.android.material.button.MaterialButton
@@ -143,8 +144,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_5" />
 
         <com.google.android.material.button.MaterialButton
@@ -152,8 +153,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_6" />
 
         <com.google.android.material.button.MaterialButton
@@ -162,8 +163,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_minus" />
 
         <com.google.android.material.button.MaterialButton
@@ -171,8 +172,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_7" />
 
         <com.google.android.material.button.MaterialButton
@@ -180,8 +181,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_8" />
 
         <com.google.android.material.button.MaterialButton
@@ -189,8 +190,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_9" />
 
         <com.google.android.material.button.MaterialButton
@@ -199,8 +200,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_multiply" />
 
         <com.google.android.material.button.MaterialButton
@@ -208,9 +209,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnSpan="2"
-            android:padding="@dimen/land_padding"
             android:layout_columnWeight="1"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_0" />
 
         <com.google.android.material.button.MaterialButton
@@ -218,18 +219,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:padding="@dimen/land_padding"
             android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_dot" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/key_result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/land_padding"
             android:layout_columnWeight="1"
             android:layout_margin="@dimen/calc_button_border"
             android:backgroundTint="@color/operationBtnColor"
+            android:padding="@dimen/land_padding"
             android:text="@string/key_result" />
 
     </GridLayout>
