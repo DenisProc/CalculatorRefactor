@@ -23,6 +23,7 @@
     <string name="key_radical">√</string>
     <string name="key_lightTheme">cветлая тема</string>
     <string name="key_darkTheme">темная тема</string>
+    <string name="key_theme">тема приложения</string>
 
 
 </resources>

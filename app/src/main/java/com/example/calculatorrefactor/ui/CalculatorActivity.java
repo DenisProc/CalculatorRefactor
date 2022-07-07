@@ -1,21 +1,24 @@
 package com.example.calculatorrefactor.ui;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.example.calculatorrefactor.R;
 import com.example.calculatorrefactor.model.CalculatorImplement;
 import com.example.calculatorrefactor.model.Operator;
-import com.google.android.material.button.MaterialButton;
-import com.google.android.material.switchmaterial.SwitchMaterial;
+import com.example.calculatorrefactor.model.Theme;
+import com.example.calculatorrefactor.model.ThemeRepository;
+import com.example.calculatorrefactor.model.ThemeRepositoryImpl;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,16 +26,14 @@ import java.util.Map;
 public class CalculatorActivity extends AppCompatActivity implements CalculatorView {
     private TextView resultTxt;
     private CalculatorPresenter calculatorPresenter;
-
-    Operator operator;
+    private ThemeRepository repository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        repository = ThemeRepositoryImpl.getInstance(this);
 
-        SharedPreferences preferences = getSharedPreferences("themes.xml", Context.MODE_PRIVATE);
-        int theme = preferences.getInt("theme",R.style.Theme_CalculatorRefactorLight);
-        setTheme(theme);
+        setTheme(repository.getSavedTheme().getThemeRes());
 
 
         setContentView(R.layout.activity_calculator);
@@ -40,13 +41,22 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         resultTxt = findViewById(R.id.showResultTxt);
         calculatorPresenter = new CalculatorPresenter(this, new CalculatorImplement());
 
-        findViewById(R.id.dark_theme).setOnClickListener(view -> {
-            preferences.edit().putInt("theme",R.style.Theme_CalculatorRefactorDark).commit();
-            recreate();
+        ActivityResultLauncher<Intent> themeLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+            if (result.getResultCode() == Activity.RESULT_OK) {
+                Intent intent = result.getData();
+
+                Theme selectedTheme = (Theme) intent.getSerializableExtra(ThemeActivity.EXTRA_THEME);
+
+                repository.saveTheme(selectedTheme);
+
+                recreate();
+            }
         });
-        findViewById(R.id.light_theme).setOnClickListener(view -> {
-            preferences.edit().putInt("theme",R.style.Theme_CalculatorRefactorLight).commit();
-            recreate();
+        findViewById(R.id.theme).setOnClickListener(view -> {
+            Intent intent = new Intent(CalculatorActivity.this, ThemeActivity.class);
+            intent.putExtra(ThemeActivity.EXTRA_THEME, repository.getSavedTheme());
+
+            themeLauncher.launch(intent);
         });
 
 
@@ -92,12 +102,7 @@ public class CalculatorActivity extends AppCompatActivity implements CalculatorV
         findViewById(R.id.key_result).setOnClickListener(operationsClickListener);
         findViewById(R.id.key_polarity).setOnClickListener(operationsClickListener);
 
-        findViewById(R.id.key_polarity).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                calculatorPresenter.polarityPass();
-            }
-        });
+        findViewById(R.id.key_polarity).setOnClickListener(view -> calculatorPresenter.polarityPass());
 
         findViewById(R.id.key_сlean).setOnClickListener(view -> calculatorPresenter.cleanPass());
 
