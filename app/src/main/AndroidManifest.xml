@@ -11,15 +11,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CalculatorRefactor"
+        android:theme="@style/Theme.CalculatorRefactorLight"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.ThemeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.CalculatorActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="launch"
+                    android:scheme="calculator" />
             </intent-filter>
         </activity>
     </application>

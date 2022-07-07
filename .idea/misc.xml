@@ -3,7 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/denis/AndroidStudioProjects/CalculatorRefactor/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1725" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/CalculatorRefactor/app/src/main/res/drawable/btn_back.xml" value="0.217" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/CalculatorRefactor/app/src/main/res/drawable/gradient.xml" value="0.1725" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/CalculatorRefactor/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1725" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/CalculatorRefactor/app/src/main/res/layout-land/activity_calculator.xml" value="0.2" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/CalculatorRefactor/app/src/main/res/layout/activity_calculator.xml" value="0.259375" />
         <entry key="..\:/Users/denis/AndroidStudioProjects/CalculatorRefactor/app/src/main/res/layout/activity_main.xml" value="0.2453125" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/CalculatorRefactor/app/src/main/res/layout/activity_theme.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/denis/AndroidStudioProjects/CalculatorRefactor/app/src/main/res/layout/activity_themes.xml" value="0.259375" />
       </map>
     </option>
   </component>

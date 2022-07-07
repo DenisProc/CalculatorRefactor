@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A9A9A9"
+    android:orientation="vertical"
+    tools:context=".ui.CalculatorActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:text="@string/key_theme"
+        android:textSize="15sp" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/showResultTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="45sp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_сlean"
+            style="?attr/caclcOperationsBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_сlean" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_radical"
+            style="?attr/caclcOperationsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_radical" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_polarity"
+            style="?attr/caclcOperationsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_polarity" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_divide"
+            style="?attr/caclcOperationsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_divide" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_3" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_plus"
+            style="?attr/caclcOperationsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_plus" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_4" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_5" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_6" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_minus"
+            style="?attr/caclcOperationsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_minus" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_7" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_9" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_multiply"
+            style="?attr/caclcOperationsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_multiply" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_0" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_dot" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="@dimen/calc_button_border"
+            android:backgroundTint="@color/operationBtnColor"
+            android:padding="@dimen/land_padding"
+            android:text="@string/key_result" />
+
+    </GridLayout>
+</LinearLayout>
